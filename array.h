@@ -7,7 +7,8 @@ struct _my_array
     int size;
     double *data;
 };
-typedef struct _my_array ARRAY;
+typedef struct _my_array Array;
 
 #endif // ARRAY_H
+
 
