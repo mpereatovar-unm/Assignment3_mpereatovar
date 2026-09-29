@@ -1,10 +1,13 @@
-include <stdio.h>   // printf
+//Monica Perea
+//Sources: GeeksforGeeks pointer in C, Stack Overflow, and Claude ai
+
+#include <stdio.h>   // printf
 #include <stdlib.h>  // malloc, free , atoi (ASCII to integer)
 
 #include "array.h"  // Array Structure
 
 void output_array(Array *a); //Prints all the values in the array
-void shirt_array(Array *a); // Shifts values one position to the left
+void shift_array(Array *a); // Shifts values one position to the left
 Array *average_adjacent(Array *a);
 
 
@@ -69,7 +72,7 @@ int main(int argc, char **argv)  // int argc (# of arguments), Arry if strings
 
   }
   //Function 2
-void shirt_array(Array *a) {
+void shift_array(Array *a) {
   int i;
   double first;
 
@@ -84,8 +87,11 @@ void shirt_array(Array *a) {
 
 //Function 3
 Array *average_adjacent(Array *a) {
+
+  int i;
+  Array *a2;
   a2 = (Array *)malloc(1 * sizeof(Array));  // Allocate memory for the new array
-  a2->size = a->size/2;  // The size of the
+  a2->size = a->size/2;
   a2->data = (double *)malloc(a2->size * sizeof(double));  // Allocate memory for the data member
 
   for (int i = 0; i < a2->size; i++) {
